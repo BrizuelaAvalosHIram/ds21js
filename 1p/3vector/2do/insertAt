@@ -31,16 +31,4 @@ else {
     alert("La posición esta fuera del arreglo");
 }
 console.log (array);
- /*
- * PROBLEM 2
- * removeAt(p)
- *
- * removes value at position p
- * @arg {number} p - position
- *
- * @example
- * removeAt(3)
- *
- * @see {@link https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array}
- * @see {@link https://jsdoc.app}
- */
+
