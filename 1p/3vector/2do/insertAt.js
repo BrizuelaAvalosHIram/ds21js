@@ -1,4 +1,5 @@
- /*INSTRUCTIONS
+//Brizuela Avalos Hiram 3°F
+/*INSTRUCTIONS
  * 
  * create one file by program
  * implement a method, function, non-function solution
