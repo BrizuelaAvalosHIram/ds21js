@@ -1,4 +1,4 @@
-//Brizuela Avalos Hiram 3°F
+//Brizuela Avalos Hiram 3F
 /** INSTRUCTIONS
  * 
  * create one file by program
