@@ -1,3 +1,5 @@
+//Brizuela Avalos Hiram
+
 function Node(obj){  //Se define la estructura de los datos
     this.data =obj; 
     this.left=null;
