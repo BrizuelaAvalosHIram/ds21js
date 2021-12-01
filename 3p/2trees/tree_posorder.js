@@ -4,16 +4,16 @@ function Node(obj) {
     this.left = null; 
     this.right = null;
 }
-//Definir los nodos
-let a = new Node('+');
+
+let a = new Node('+');  //Se definen los nodos
 let b1 = new Node(24);
 let b2 = new Node(25);
-//Asignar los hijps
-a.left = b1;
+
+a.left = b1;        //Asignamos los hijos
 a.right = b2;
 
 console.log("Posorder");
-posorder(a); //Llamar a la función Posorder
+posorder(a); //Llamar a la función 
 function posorder(n) {
     if (n!==null) {
         posorder(n.left);
