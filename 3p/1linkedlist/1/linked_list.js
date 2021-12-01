@@ -1,32 +1,58 @@
 //Brizuela Avalos Hiram
-
-function Node(data) { //Estrucutra de la lista
-    this.data = data;
-    this.next = next;
-  }  
-function Stack() { //Estrucutra de la pila
-    this.push = push;
-    this.head = null;
-  }
-//Colocamos la función para introducir elementos a la pila
-function push() { 
-    const nuevoobjeto = new Node(c, this.head)
-    this.head = newItem;}
-
-var cont= 1,tiempo=0, contador2=0;
-while(cont<8){
-  //comenzamos a contar el tiempo
-    var inicio = new Date(); 
-    var contador=0,b;
-    var s = new Stack();
-    var numero=numeros(1,10000)
-    function numeros(min,max){
-        for(let i=0;i<10000;i++){          
-            s.push=Math.floor(Math.random()* (max - min)) + min;       
-            contador++; } }
-    var fin = new Date() - inicio;
-    tiempo = tiempo + fin; //Aquí termina de contar el tiempo
-    console.log("La corrida "+cont+" tardó "+fin+"ms")
-    cont++; contador2=contador2+contador;
+function Node(element) {
+    this.element = element;
+    this.next = null;
 }
-console.log("El tiempo promedio es: "+(tiempo/7)+" ms"); //Promedio
+
+function LList() {
+    this.head = new Node("head");
+    this.find = find;
+    this.insert = insert;
+    //this.remove = remove;
+    this.display = display;
+}
+
+function find(item) {
+    var currNode = this.head;
+    while (currNode.element != item) {
+        currNode = currNode.next;
+    }
+    return currNode;
+}
+
+function insert(newElement, item) {
+    console.log(newElement, item);
+    var newNode = new Node(newElement);
+    var current = this.find(item);
+    newNode.next = current.next;
+    current.next = newNode;
+}
+
+function display() {
+    var currNode = this.head;
+    while (!(currNode.next == null)) {
+        console.log(currNode.next.element);
+        currNode = currNode.next;
+    }
+}
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+var n = new LList();
+let newItem, tmp;
+var pasos = 0;
+console.time("Tiempo");
+for (i = 0; i < 10000; i++) {
+    newItem = getRandomInt(1, 10000);
+    n.insert(newItem, tmp ? tmp : 'head')
+    tmp = newItem;
+    pasos++;
+}
+
+
+console.timeEnd("Tiempo");
+console.log("Pasos: "+pasos);
+
+
